@@ -8,15 +8,18 @@ export default function Footer() {
   const empresa = [
     { label: 'Quem somos', to: '/sobre' },
     { label: 'Serviços', to: '/servicos' },
-    { label: 'Equipamentos', to: '/equipamentos' },
+    { label: 'Segmentos', to: '/segmentos' },
+    { label: 'Galeria de obras', to: '/galeria' },
     { label: 'Blog', to: '/blog' },
-    { label: 'Contato', to: '/contato' },
+    { label: 'Perguntas frequentes', to: '/faq' },
+    { label: 'Trabalhe conosco', to: '/trabalhe-conosco' },
   ]
 
   const equipamentos = [
     { label: 'Carregadeira New Holland W12D', to: '/equipamentos/carregadeira' },
     { label: 'Retroescavadeira JCB 4CX ECO', to: '/equipamentos/retroescavadeira' },
     { label: 'Miniescavadeira', to: '/equipamentos/miniescavadeira' },
+    { label: 'Ver todos os equipamentos', to: '/equipamentos' },
   ]
 
   return (
@@ -31,7 +34,7 @@ export default function Footer() {
               <span style={{ fontSize: 10, letterSpacing: 2.5, color: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-display)' }}>LOCAÇÕES</span>
             </Link>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, fontWeight: 300, marginBottom: 20 }}>
-              Especialistas em terraplanagem e locação de máquinas pesadas em Mato Grosso.
+              Especialistas em terraplanagem e locação de máquinas pesadas em Mato Grosso desde 2019.
             </p>
             <div style={{ display: 'flex', gap: 8 }}>
               {[
@@ -71,13 +74,17 @@ export default function Footer() {
             <a href="tel:+5565993392002" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>(65) 99339-2002</a>
             <a href="mailto:comercial@rizam.com.br" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>comercial@rizam.com.br</a>
             <a href="https://wa.me/5565993392002" target="_blank" rel="noreferrer" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>WhatsApp</a>
-            <Link to="/contato" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>Solicitar orçamento</Link>
+            <Link to="/orcamento" style={{ ...linkStyle, color: 'var(--yellow)', fontWeight: 600 }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--yellow)'}>Solicitar orçamento →</Link>
           </div>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+        {/* Links legais */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>© 2025 Rizam Locações · Cuiabá – MT</span>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>(65) 99339-2002 · comercial@rizam.com.br</span>
+          <div style={{ display: 'flex', gap: 20 }}>
+            <Link to="/faq" style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.25)'}>FAQ</Link>
+            <Link to="/trabalhe-conosco" style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)', textDecoration: 'none' }} onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.25)'}>Trabalhe Conosco</Link>
+          </div>
         </div>
       </div>
 
