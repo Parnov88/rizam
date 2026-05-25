@@ -5,7 +5,7 @@ import { openWhatsApp } from '../helpers/whatsapp'
 
 const numeros = [
   { num: '5+', label: 'Anos de experiência no setor' },
-  { num: '2+', label: 'Equipamentos pesados próprios' },
+  { num: '10+', label: 'Equipamentos pesados próprios' },
   { num: '100+', label: 'Obras executadas em MT' },
   { num: '24h', label: 'Atendimento e suporte' },
 ]
