@@ -1,20 +1,35 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   const linkStyle = { color: 'rgba(255,255,255,0.4)', fontSize: 13, textDecoration: 'none', display: 'block', marginBottom: 8, fontWeight: 300, transition: 'color 0.2s' }
   const onHover = e => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'
   const offHover = e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'
 
+  const empresa = [
+    { label: 'Quem somos', to: '/sobre' },
+    { label: 'Serviços', to: '/servicos' },
+    { label: 'Equipamentos', to: '/equipamentos' },
+    { label: 'Blog', to: '/blog' },
+    { label: 'Contato', to: '/contato' },
+  ]
+
+  const equipamentos = [
+    { label: 'Carregadeira New Holland W12D', to: '/equipamentos/carregadeira' },
+    { label: 'Retroescavadeira JCB 4CX ECO', to: '/equipamentos/retroescavadeira' },
+    { label: 'Miniescavadeira', to: '/equipamentos/miniescavadeira' },
+  ]
+
   return (
     <footer style={{ background: '#111111', padding: '56px 40px 28px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        {/* Grid superior */}
         <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr', gap: 40, paddingBottom: 32, borderBottom: '1px solid rgba(255,255,255,0.07)', marginBottom: 24 }} className="footer-grid">
 
           {/* Col 1 — Marca */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, textDecoration: 'none' }}>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 20, color: '#fff' }}>Rizam</span>
               <span style={{ fontSize: 10, letterSpacing: 2.5, color: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-display)' }}>LOCAÇÕES</span>
-            </div>
+            </Link>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, fontWeight: 300, marginBottom: 20 }}>
               Especialistas em terraplanagem e locação de máquinas pesadas em Mato Grosso.
             </p>
@@ -37,34 +52,29 @@ export default function Footer() {
           {/* Col 2 — A Empresa */}
           <div>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 12, color: 'rgba(255,255,255,0.6)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 16 }}>A Empresa</div>
-            {['Quem somos', 'Serviços', 'Equipamentos', 'Blog', 'Contato'].map(l => (
-              <a key={l} href={`#${l.toLowerCase().replace(' ', '')}`} style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>{l}</a>
+            {empresa.map(l => (
+              <Link key={l.to} to={l.to} style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>{l.label}</Link>
             ))}
           </div>
 
           {/* Col 3 — Equipamentos */}
           <div>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 12, color: 'rgba(255,255,255,0.6)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 16 }}>Equipamentos</div>
-            {['Carregadeira New Holland W12D', 'Retroescavadeira JCB 4CX ECO', 'Miniescavadeira'].map(l => (
-              <a key={l} href="#locacao" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>{l}</a>
+            {equipamentos.map(l => (
+              <Link key={l.to} to={l.to} style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>{l.label}</Link>
             ))}
           </div>
 
           {/* Col 4 — Contato */}
           <div>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 12, color: 'rgba(255,255,255,0.6)', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 16 }}>Contato</div>
-            {[
-              { label: '(65) 99339-2002', href: 'tel:+5565993392002' },
-              { label: 'comercial@rizam.com.br', href: 'mailto:comercial@rizam.com.br' },
-              { label: 'WhatsApp', href: 'https://wa.me/5565993392002' },
-              { label: 'Solicitar orçamento', href: '#contato' },
-            ].map(l => (
-              <a key={l.label} href={l.href} target={l.href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>{l.label}</a>
-            ))}
+            <a href="tel:+5565993392002" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>(65) 99339-2002</a>
+            <a href="mailto:comercial@rizam.com.br" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>comercial@rizam.com.br</a>
+            <a href="https://wa.me/5565993392002" target="_blank" rel="noreferrer" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>WhatsApp</a>
+            <Link to="/contato" style={linkStyle} onMouseEnter={onHover} onMouseLeave={offHover}>Solicitar orçamento</Link>
           </div>
         </div>
 
-        {/* Rodapé */}
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>© 2025 Rizam Locações · Cuiabá – MT</span>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>(65) 99339-2002 · comercial@rizam.com.br</span>
