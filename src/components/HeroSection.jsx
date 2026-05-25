@@ -113,7 +113,7 @@ export default function HeroSection({ videoUrl }) {
 
           {/* Stats */}
           {[
-            { num: '2', label: 'Equipamentos disponíveis para locação' },
+            { num: '10+', label: 'Equipamentos disponíveis para locação' },
             { num: '5+', label: 'Anos de experiência em Mato Grosso' },
             { num: '24h', label: 'Atendimento e suporte para sua operação' },
           ].map((stat, i) => (
