@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function TopBar() {
   return (
-    <div style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+    <div className="topbar" style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 36 }}>
         {/* Esquerda */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>

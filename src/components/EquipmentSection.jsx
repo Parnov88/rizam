@@ -106,7 +106,7 @@ function EquipCard({ equip, index }) {
 
 export default function EquipmentSection() {
   return (
-    <section id="locacao" style={{ background: 'var(--gray)', padding: '80px 40px' }}>
+    <section id="locacao" className="equip-section" style={{ background: 'var(--gray)', padding: '80px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         {/* Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 48, flexWrap: 'wrap', gap: 16 }}>
@@ -121,7 +121,7 @@ export default function EquipmentSection() {
         </div>
 
         {/* Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 0 }}>
+        <div className="equip-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 0 }}>
           {equipamentos.map((eq, i) => <EquipCard key={i} equip={eq} index={i} />)}
         </div>
       </div>

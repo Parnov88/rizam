@@ -22,7 +22,7 @@ export default function ContactSection() {
   const inputStyle = { width: '100%', border: '1.5px solid var(--border)', borderRadius: 3, padding: '10px 12px', fontFamily: 'var(--font-body)', fontSize: 14, outline: 'none', background: '#fff', color: '#111', transition: 'border-color 0.2s' }
 
   return (
-    <section id="contato" style={{ background: 'var(--gray)', borderTop: '1px solid var(--border)', padding: '80px 40px' }}>
+    <section id="contato" className="contact-section" style={{ background: 'var(--gray)', borderTop: '1px solid var(--border)', padding: '80px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 60, alignItems: 'start' }} className="contact-grid">
 
         {/* Esquerda */}

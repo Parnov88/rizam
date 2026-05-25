@@ -16,29 +16,172 @@
     --font-body: 'DM Sans', sans-serif;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+  img { max-width: 100%; }
+  #root { width: 100%; text-align: left; }
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+/* ─── TOPBAR ─── */
+@media (max-width: 768px) {
+  .topbar { display: none !important; }
+}
 
-  body {
-    font-family: var(--font-body);
-    color: var(--text);
-    background: var(--white);
-    -webkit-font-smoothing: antialiased;
-  }
+/* ─── NAVBAR ─── */
+@media (max-width: 768px) {
+  .nav-links, .nav-ctas { display: none !important; }
+  .hamburger { display: flex !important; }
+  .navbar-inner { padding: 0 20px !important; }
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-  }
+/* ─── HERO ─── */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr !important; padding: 48px 20px !important; gap: 32px !important; }
+  .hero-panel { display: none !important; }
+  .hero-btns { flex-direction: column !important; }
+  .hero-btns a, .hero-btns button { width: 100% !important; text-align: center !important; justify-content: center !important; }
+}
 
-  #root {
-    width: 100%;
-    text-align: left;
-  }
+/* ─── STRIP BANNER ─── */
+@media (max-width: 600px) {
+  .strip-banner { flex-direction: column !important; gap: 12px !important; padding: 16px 20px !important; text-align: center !important; }
+}
+
+/* ─── EQUIPMENT SECTION ─── */
+@media (max-width: 768px) {
+  .equip-section { padding: 48px 20px !important; }
+  .equip-header { flex-direction: column !important; align-items: flex-start !important; }
+  .equip-grid { grid-template-columns: 1fr !important; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .equip-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ─── SERVICES ─── */
+@media (max-width: 768px) {
+  .services-section { padding: 48px 20px !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .services-grid > div { border-right: none !important; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ─── ABOUT ─── */
+@media (max-width: 768px) {
+  .about-section { padding: 48px 20px !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .about-nums { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ─── STATS ─── */
+@media (max-width: 768px) {
+  .stats-section { padding: 48px 20px !important; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── CTA BANNER ─── */
+@media (max-width: 600px) {
+  .cta-banner { padding: 48px 20px !important; }
+  .cta-btns { flex-direction: column !important; align-items: stretch !important; }
+  .cta-btns button { width: 100% !important; }
+}
+
+/* ─── BLOG ─── */
+@media (max-width: 768px) {
+  .blog-section { padding: 48px 20px !important; }
+  .blog-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── CONTACT ─── */
+@media (max-width: 768px) {
+  .contact-section { padding: 48px 20px !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+
+/* ─── FOOTER ─── */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+  footer { padding: 40px 20px 24px !important; }
+}
+
+/* ─── PAGES — headers ─── */
+@media (max-width: 768px) {
+  .page-header { padding: 40px 20px 32px !important; }
+  .page-body { padding: 32px 20px !important; }
+}
+
+/* ─── EQUIPAMENTOS PAGE ─── */
+@media (max-width: 768px) {
+  .equip-page-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── DETALHE EQUIPAMENTO ─── */
+@media (max-width: 768px) {
+  .detalhe-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .detalhe-specs { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .detalhe-img { height: 240px !important; border-radius: 4px !important; }
+}
+
+/* ─── SOBRE ─── */
+@media (max-width: 768px) {
+  .sobre-hero { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .sobre-valores { grid-template-columns: 1fr !important; }
+  .timeline-grid { grid-template-columns: 80px 1fr !important; }
+  .timeline-line { left: 40px !important; }
+  .timeline-dot { left: -22px !important; }
+}
+
+/* ─── ORÇAMENTO ─── */
+@media (max-width: 768px) {
+  .orc-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .orc-form-cols { grid-template-columns: 1fr !important; }
+}
+
+/* ─── GALERIA ─── */
+@media (max-width: 768px) {
+  .galeria-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .galeria-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── SEGMENTOS ─── */
+@media (max-width: 768px) {
+  .segmentos-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── TRABALHE CONOSCO ─── */
+@media (max-width: 768px) {
+  .trabalhe-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+
+/* ─── FAQ ─── */
+@media (max-width: 768px) {
+  .faq-body { padding: 32px 20px !important; }
+}
+
+/* ─── BLOG GRID ─── */
+@media (max-width: 768px) {
+  .blog-posts-grid { grid-template-columns: 1fr !important; }
+  .blog-cats { padding: 0 20px !important; }
+}
+
+/* ─── CONTATO PAGE ─── */
+@media (max-width: 768px) {
+  .contato-cards { flex-direction: column !important; }
+}
+
+/* ─── GERAL ─── */
+@media (max-width: 768px) {
+  section, main > div { padding-left: 20px !important; padding-right: 20px !important; }
 }

@@ -42,7 +42,7 @@ function ServiceItem({ servico, index }) {
 
 export default function ServicesSection() {
   return (
-    <section id="servicos" style={{ background: '#fff', padding: '80px 40px' }}>
+    <section id="servicos" className="services-section" style={{ background: '#fff', padding: '80px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
@@ -52,7 +52,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)' }}>
+        <div className="services-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)' }}>
           {servicos.map((s, i) => (
             <div key={i} style={{ borderRight: (i + 1) % 3 !== 0 ? '1px solid var(--border)' : 'none', borderBottom: i < 3 ? '1px solid var(--border)' : 'none' }}>
               <ServiceItem servico={s} index={i} />

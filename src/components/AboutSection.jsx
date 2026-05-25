@@ -15,7 +15,7 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section id="sobre" style={{ background: 'var(--dark)', padding: '80px 40px' }}>
+    <section id="sobre" className="about-section" style={{ background: 'var(--dark)', padding: '80px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="about-grid">
         {/* Esquerda */}
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.6 }}>

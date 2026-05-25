@@ -16,7 +16,7 @@ const laterais = [
 
 export default function BlogSection() {
   return (
-    <section id="blog" style={{ background: '#fff', padding: '80px 40px' }}>
+    <section id="blog" className="blog-section" style={{ background: '#fff', padding: '80px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         {/* Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>

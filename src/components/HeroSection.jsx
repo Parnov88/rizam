@@ -62,7 +62,7 @@ export default function HeroSection({ videoUrl }) {
       <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: 'var(--yellow)' }} />
 
       {/* Content */}
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 1200, margin: '0 auto', padding: '80px 40px', display: 'grid', gridTemplateColumns: '1fr 400px', gap: 80, alignItems: 'center', minHeight: 560 }}>
+      <div className="hero-grid" style={{ position: 'relative', zIndex: 1, maxWidth: 1200, margin: '0 auto', padding: '80px 40px', display: 'grid', gridTemplateColumns: '1fr 400px', gap: 80, alignItems: 'center', minHeight: 560 }}>
 
         {/* Coluna esquerda */}
         <motion.div initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.6, delay: 0.1 }}>
@@ -86,7 +86,7 @@ export default function HeroSection({ videoUrl }) {
           </p>
 
           {/* Botões */}
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <div className="hero-btns" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <button onClick={() => openWhatsApp()} style={{ background: 'var(--yellow)', color: '#111', border: 'none', borderRadius: 3, padding: '13px 28px', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 800, cursor: 'pointer', transition: 'background 0.2s, transform 0.2s' }}
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--yellow2)'; e.currentTarget.style.transform = 'translateY(-1px)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'var(--yellow)'; e.currentTarget.style.transform = 'translateY(0)' }}>

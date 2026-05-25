@@ -17,7 +17,7 @@ export default function StatsSection() {
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section style={{ background: '#111', padding: '72px 40px' }}>
+    <section className="stats-section" style={{ background: '#111', padding: '72px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         {/* Título */}
         <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(26px, 3.5vw, 44px)', color: '#fff', textAlign: 'center', marginBottom: 56 }}>
